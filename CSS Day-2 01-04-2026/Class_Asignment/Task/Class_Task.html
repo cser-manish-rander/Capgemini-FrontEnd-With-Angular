@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar Fix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            padding: 10px 25px;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            height: 28px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-bottom: 3px;
+            position: relative;
+        }
+
+        /* Blue underline effect */
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0%;
+            height: 2px;
+            background-color: #4da6ff;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #4da6ff;
+        }
+
+        .search-box {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            width: 250px;
+            outline: none;
+        }
+
+        .logout-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 15px;
+        }
+
+        .logout-btn:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="left-section">
+
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" class="logo">
+        <a href="#" class="nav-link">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        
+        <a href="#" class="nav-link">
+            <i class="fa-solid fa-phone"></i> Contact
+        </a>
+
+    </div>
+    <input type="text" placeholder="Search Google" class="search-box">
+    <button class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
+
+</div>
+
+</body>
+</html>
